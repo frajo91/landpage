@@ -1,0 +1,67 @@
+@import './base.css';
+
+#app{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: purple;
+  padding: 24px;
+  font-family: Lato !important;
+}
+
+.transparente{
+  background-color: transparent !important;
+}
+
+.container1{
+  background-color: white;
+  max-width: 1920px;
+}
+
+.img-100{
+  width: 100%;
+  height: auto;
+}
+
+.text-big{
+margin: 0px !important;
+color: #4b1951 !important;
+}
+
+.m-0{
+  margin: 0px !important;
+}
+
+.divider{
+  width: auto;
+  height: 120px;
+}
+
+@font-face {
+  font-family: "RLato";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("RLato"), url("/Font/Lato-Regular.ttf") format("ttf");
+}
+
+.video{
+  background-color: #4b1951 !important;
+  border-radius: 10px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.player{
+  width: 100%;
+  height: auto;
+}
+
+.col-center{
+  align-content: center;
+}
+
+.clase{
+  background-image: url("/clase.png");
+  height: 20px;
+
+}
