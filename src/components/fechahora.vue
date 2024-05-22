@@ -1,48 +1,32 @@
 <script setup>
 defineProps({
-  dia: {
-    type: String,
-    required: true
-  },
-  dianumber: {
-    type: String,
-    required: true
-  },
-  mes: {
-    type: String,
-    required: true
-  },
-  hora: {
-    type: String,
-    required: true
-  },
-  ampm: {
-    type: String,
-    required: true
+  fecha:{
+    type:Object,
+    required:true
   }
 })
 </script>
 
 <template>
-  <a-row justify="center" :gutter="16" style="padding:10px;">
+  <a-row justify="center" align="middle" :gutter="16" style="padding:10px;">
     <a-col>
       <a-row justify="end">
-        <a-typography-text class="m-0">{{dia}}</a-typography-text>
+        <a-typography-text class="m-0">{{fecha.dia}}</a-typography-text>
       </a-row>
       <a-row justify="end">
-        <a-typography-title class="text-big m-0">{{dianumber}}</a-typography-title>
+        <a-typography-title class="text-big m-0">{{fecha.dianumber}}</a-typography-title>
       </a-row>
       <a-row justify="end">
-        <a-typography-text class="m-0">{{mes}}</a-typography-text>
+        <a-typography-text class="m-0">{{fecha.mes}}</a-typography-text>
       </a-row>
     </a-col>
     <a-col>
-      <img src="/divider2.png" alt="" style="height: 100%">
+      <img src="/divider2.png" alt="" style="height: 90%">
     </a-col>
     <a-col class="col-center">
       <a-row align="bottom">
-        <a-col><a-typography-title class="text-big m-0">{{hora}}</a-typography-title></a-col>
-        <a-col><a-typography-text>{{ampm}}</a-typography-text> </a-col>
+        <a-col><a-typography-title class="text-big m-0">{{fecha.hora}}</a-typography-title></a-col>
+        <a-col><a-typography-text>{{fecha.ampm}}</a-typography-text> </a-col>
       </a-row>
     </a-col>
   </a-row>
