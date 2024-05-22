@@ -59,6 +59,7 @@ color: #4b1951 !important;
 
 .clase{
   background-image: url("/clase.png");
-  height: 20px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 
 }
