@@ -24,20 +24,20 @@ defineProps({
 </script>
 
 <template>
-  <a-row justify="center" :gutter="16">
+  <a-row justify="center" :gutter="16" style="padding:10px;">
     <a-col>
       <a-row justify="end">
-        <a-typography-title :level="3" class="m-0">{{dia}}</a-typography-title>
+        <a-typography-text class="m-0">{{dia}}</a-typography-text>
       </a-row>
       <a-row justify="end">
         <a-typography-title class="text-big m-0">{{dianumber}}</a-typography-title>
       </a-row>
       <a-row justify="end">
-        <a-typography-title :level="3" class="m-0">{{mes}}</a-typography-title>
+        <a-typography-text class="m-0">{{mes}}</a-typography-text>
       </a-row>
     </a-col>
     <a-col>
-      <img src="/divider2.png" alt="">
+      <img src="/divider2.png" alt="" style="height: 100%">
     </a-col>
     <a-col class="col-center">
       <a-row align="bottom">
