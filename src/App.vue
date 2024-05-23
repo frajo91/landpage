@@ -7,12 +7,192 @@ import axios from 'axios';
 var datos=ref(null);
 
 onMounted(async () => {
-  const response = await axios.get("/json/videos.json")
+  const response = await axios.get("./json/videos.json")
   datos.value = toRaw(response.data)
 
 })
+const open = ref(false);
+const titulo = ref(null);
+const video = ref(null);
+const showModal = (clase) => {
+  open.value = true;
+  titulo.value=clase.titulo;
+  video.value=clase.video;
+};
 
+/*const datos={
+   "bienvenida":{
+         "titulo":"BIENVENIDA AL CURSO",
+         "descripcion": "Universidad Procaps® y Médicos de la Fundación Santa Fe y miembros activos de la sociedad de Gastroenterología Colombiana",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"30",
+            "mes":"MAYO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+   },
+   "clases":[
+      {
+         "id":1,
+         "titulo":"DISPEPSIA FUNCIONAL",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"06",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+         "id":2,
+         "titulo":"ABORDAJE INTEGRAL DEL DOLOR OBDOMINAL AGUDO Y CRÓNICO",
+         "docente":"DR. REYNALDO RINCÓN",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"13",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+         "id":3,
+         "titulo":"SII UNA REALIDAD DOLOROSA Y MOLESTA",
+         "docente":"DR. FABIAN JULIAO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"20",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":4,
+         "titulo":"REFLUJO GASTROESOFÁGICO, LO QUE EL MÉDICO DEBE SABER",
+         "docente":"DR. FERNANDO PINEDA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"27",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":5,
+         "titulo":"ABORDAJE INTEGRAL DEL PACIENTE CON DIARREA CRÓNICA",
+         "docente":"DR. FABIAN JULIAO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"04",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":6,
+         "titulo":"ULCERA PÉPTICA E INFECCIÓN POR HELICOBACTER PYLORI ¿EN QUE ESTAMOS?",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"11",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":7,
+         "titulo":"ENFOQUE INTEGRAL DEL ESTREÑIMIENTO CRÓNICO",
+         "docente":"DR. REYNALDO RINCÓN",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"18",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":8,
+         "titulo":"SII ASOCIADO A SOBRECRECIMIENTO BACTERIANO - SIBO",
+         "docente":"DR. VIVIANA OBANDO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"25",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":9,
+         "titulo":"ENFERMEDAD HEPÁTICA GRASA NO ALCOHÓLICA",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"01",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":10,
+         "titulo":"MANEJO ACTUAL DEL VÓMITO Y NÁUSEAS, Y ASPECTOS CLÍNICO TERAPÉUTICOS",
+         "docente":"DR. FERNANDO PINEDA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"08",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":11,
+         "titulo":"TRANSAMINITIS",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"15",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":12,
+         "titulo":"PROBIÓTICOS Y SALUD GASTROINTESTINAL",
+         "docente":"DR. VIVIANA OBANDO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"22",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      }
 
+   ]
+};*/
 
 
 </script>
@@ -112,7 +292,56 @@ onMounted(async () => {
             </a-col>
           </a-row>
           <a-row justify="space-around" align="top" :gutter="[16,16]" style="padding: 16px;">
-            <TheWelcome v-if="datos!=null" v-for="clase in toRaw(datos.clases)" v-bind:clase="clase"/>
+            <a-col :xs="22" :md="7" v-if="datos!=null" v-for="clase in toRaw(datos.clases)">
+                <a-row class="clase" justify="center" align="middle" >
+                    <a-typography-text class="m-0" style="color: white !important">CLASE {{clase.id}}</a-typography-text>
+                    <img v-if="clase.video!=''" src="/play.png" alt="" class="play">
+                </a-row>
+                <a-row  justify="center" align="middle" >
+                  <a-col :span="24" style="text-align: center;"><a-typography-link @click="showModal(clase)" class="m-0 text-big" >{{clase.titulo}}</a-typography-link></a-col>
+                  <a-col><a-typography-text  class="m-0" style="color: gray;">{{clase.docente}}</a-typography-text></a-col>
+                </a-row>
+                <a-config-provider
+                :theme="{
+                  token: {
+                    fontFamily: 'Lato',
+                    colorPrimary:'purple',
+                    fontSize:12,
+                  },
+                }"
+              >
+                <a-row justify="center" align="middle" :gutter="16" style="padding:10px;">
+                <a-col>
+                  <a-row justify="end">
+                    <a-typography-text class="m-0">JUEVES</a-typography-text>
+                  </a-row>
+                  <a-row justify="end">
+                    <a-typography-title class="text-big m-0">{{clase.fecha.dianumber}}</a-typography-title>
+                  </a-row>
+                  <a-row justify="end">
+                    <a-typography-text class="m-0">{{clase.fecha.mes}}</a-typography-text>
+                  </a-row>
+                </a-col>
+                <a-col>
+                  <img src="/divider2.png" alt="" style="height: 90%">
+                </a-col>
+                <a-col class="col-center">
+                  <a-row align="bottom">
+                    <a-col><a-typography-title class="text-big m-0">7:00</a-typography-title></a-col>
+                    <a-col><a-typography-text>p.m.</a-typography-text> </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+              </a-config-provider>
+              
+            </a-col>
+            <a-modal
+                  v-model:open="open"
+                  v-bind:title="titulo"
+                  :footer="null"
+                >
+                <videoplayer v-bind:url="video"/>
+                </a-modal>
           </a-row>
         </a-space>
       </a-layout-content>
