@@ -44,7 +44,7 @@ color: #4b1951 !important;
 .video{
   background-color: #4b1951 !important;
   border-radius: 10px;
-  padding: 20px;
+  padding: 14px;
   height: fit-content;
   min-height: 200px;
 }
@@ -65,6 +65,11 @@ color: #4b1951 !important;
   height: 50px;
   background-position: center;
 
+}
+
+.macroclase{
+  line-height: 0.5rem;
+  height: 264px;
 }
 
 .play{

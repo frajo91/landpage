@@ -9,7 +9,7 @@
             "hora":"7:00",
             "ampm":"p.m."
          },
-         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+         "video":"https://universidadsaluddigestiva.com/videos/bienvenidos.mp4"
    },
    "clases":[
       {
@@ -23,11 +23,11 @@
             "hora":"7:00",
             "ampm":"p.m."
          },
-         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+         "video":""
       },
       {
          "id":2,
-         "titulo":"ABORDAJE INTEGRAL DEL DOLOR OBDOMINAL AGUDO Y CRÓNICO",
+         "titulo":"ABORDAJE INTEGRAL DEL DOLOR ABDOMINAL AGUDO Y CRÓNICO",
          "docente":"DR. REYNALDO RINCÓN",
          "fecha":{
             "dia":"JUEVES",
@@ -36,7 +36,7 @@
             "hora":"7:00",
             "ampm":"p.m."
          },
-         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+         "video":""
       },
       {
          "id":3,

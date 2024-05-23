@@ -20,179 +20,6 @@ const showModal = (clase) => {
   video.value=clase.video;
 };
 
-/*const datos={
-   "bienvenida":{
-         "titulo":"BIENVENIDA AL CURSO",
-         "descripcion": "Universidad Procaps® y Médicos de la Fundación Santa Fe y miembros activos de la sociedad de Gastroenterología Colombiana",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"30",
-            "mes":"MAYO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-   },
-   "clases":[
-      {
-         "id":1,
-         "titulo":"DISPEPSIA FUNCIONAL",
-         "docente":"DR. FERNANDO SIERRA",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"06",
-            "mes":"JUNIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-      },
-      {
-         "id":2,
-         "titulo":"ABORDAJE INTEGRAL DEL DOLOR OBDOMINAL AGUDO Y CRÓNICO",
-         "docente":"DR. REYNALDO RINCÓN",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"13",
-            "mes":"JUNIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-      },
-      {
-         "id":3,
-         "titulo":"SII UNA REALIDAD DOLOROSA Y MOLESTA",
-         "docente":"DR. FABIAN JULIAO",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"20",
-            "mes":"JUNIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":4,
-         "titulo":"REFLUJO GASTROESOFÁGICO, LO QUE EL MÉDICO DEBE SABER",
-         "docente":"DR. FERNANDO PINEDA",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"27",
-            "mes":"JUNIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":5,
-         "titulo":"ABORDAJE INTEGRAL DEL PACIENTE CON DIARREA CRÓNICA",
-         "docente":"DR. FABIAN JULIAO",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"04",
-            "mes":"JULIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":6,
-         "titulo":"ULCERA PÉPTICA E INFECCIÓN POR HELICOBACTER PYLORI ¿EN QUE ESTAMOS?",
-         "docente":"DR. FERNANDO SIERRA",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"11",
-            "mes":"JULIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":7,
-         "titulo":"ENFOQUE INTEGRAL DEL ESTREÑIMIENTO CRÓNICO",
-         "docente":"DR. REYNALDO RINCÓN",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"18",
-            "mes":"JULIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":8,
-         "titulo":"SII ASOCIADO A SOBRECRECIMIENTO BACTERIANO - SIBO",
-         "docente":"DR. VIVIANA OBANDO",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"25",
-            "mes":"JULIO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":9,
-         "titulo":"ENFERMEDAD HEPÁTICA GRASA NO ALCOHÓLICA",
-         "docente":"DR. FERNANDO SIERRA",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"01",
-            "mes":"AGOSTO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":10,
-         "titulo":"MANEJO ACTUAL DEL VÓMITO Y NÁUSEAS, Y ASPECTOS CLÍNICO TERAPÉUTICOS",
-         "docente":"DR. FERNANDO PINEDA",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"08",
-            "mes":"AGOSTO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":11,
-         "titulo":"TRANSAMINITIS",
-         "docente":"DR. FERNANDO SIERRA",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"15",
-            "mes":"AGOSTO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      },
-      {
-         "id":12,
-         "titulo":"PROBIÓTICOS Y SALUD GASTROINTESTINAL",
-         "docente":"DR. VIVIANA OBANDO",
-         "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"22",
-            "mes":"AGOSTO",
-            "hora":"7:00",
-            "ampm":"p.m."
-         },
-         "video":""
-      }
-
-   ]
-};*/
 
 
 </script>
@@ -214,7 +41,7 @@ const showModal = (clase) => {
         <a-space direction="vertical"  width="100%">
           <a-row justify="center"  align="bottom">
             <img src="/imagen1.png" alt="" class="img-100">
-            <a-col :xs="22" :md="18"><a-typography-paragraph style="text-align: center;">Es un programa de educación medica continuada, diseñado para profesionales de la salud interesados en mantenerse actualizados en patologías gastrointestinales.</a-typography-paragraph> </a-col>
+            <a-col :xs="22" :md="18"><a-typography-paragraph style="text-align: center;">Es un programa de educación médica continuada, diseñado para profesionales de la salud interesados en mantenerse actualizados en patologías gastrointestinales.</a-typography-paragraph> </a-col>
           </a-row>
           <a-row justify="center" align="middle"> 
              <a-col :xs="7" :md="6">
@@ -262,7 +89,7 @@ const showModal = (clase) => {
                 <a-typography-text>Hora por</a-typography-text>
               </a-row>
               <a-row justify="center">
-                <a-typography-text>sección</a-typography-text>
+                <a-typography-text>sesión</a-typography-text>
               </a-row>
             </a-col>
           </a-row>
@@ -271,16 +98,16 @@ const showModal = (clase) => {
             <a-typography-paragraph style="text-align: center; padding: 8px;" >Durante estas sesiones, se abordarán las patologías gastrointestinales más frecuentes en la práctica clínica, brindando información actualizada, casos clínicos relevantes y discusiones interactivas.</a-typography-paragraph>
             </a-col>
           </a-row>
-          <a-row justify="space-around" align="middle">
-            <a-col :xs="22" :md="10" >
+          <a-row justify="center" :gutter="16" align="middle">
+            <a-col :xs="22" :md="12" >
               <videoplayer v-if="datos!=null" v-bind:url="datos.bienvenida.video"/>
                
             </a-col>
-             <a-col :xs="22" :md="8" >
+             <a-col :xs="22" :md="10" >
                 <a-row justify="center" align="middle">
                   <a-col>
                     <a-row>
-                      <a-typography-title class="text-big" v-if="datos!=null">{{datos.bienvenida.titulo}}</a-typography-title>
+                      <a-typography-title :level="2" class="text-big" v-if="datos!=null">{{datos.bienvenida.titulo}}</a-typography-title>
                     </a-row>
                     <a-row>
                       <a-typography-text v-if="datos!=null">{{datos.bienvenida.descripcion}}
@@ -292,7 +119,7 @@ const showModal = (clase) => {
             </a-col>
           </a-row>
           <a-row justify="space-around" align="top" :gutter="[16,16]" style="padding: 16px;">
-            <a-col :xs="22" :md="7" v-if="datos!=null" v-for="clase in toRaw(datos.clases)">
+            <a-col class="macroclase" :xs="22" :md="7" v-if="datos!=null" v-for="clase in toRaw(datos.clases)">
                 <a-row class="clase" justify="center" align="middle" >
                     <a-typography-text class="m-0" style="color: white !important">CLASE {{clase.id}}</a-typography-text>
                     <img v-if="clase.video!=''" src="/play.png" alt="" class="play">
@@ -310,7 +137,7 @@ const showModal = (clase) => {
                   },
                 }"
               >
-                <a-row justify="center" align="middle" :gutter="16" style="padding:10px;">
+                <a-row justify="center" align="end" :gutter="16" style="padding:10px;align-items: stretch;;">
                 <a-col>
                   <a-row justify="end">
                     <a-typography-text class="m-0">JUEVES</a-typography-text>
