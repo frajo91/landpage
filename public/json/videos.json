@@ -1,0 +1,173 @@
+{
+   "bienvenida":{
+         "titulo":"BIENVENIDA AL CURSO",
+         "descripcion": "Universidad Procaps® y Médicos de la Fundación Santa Fe y miembros activos de la sociedad de Gastroenterología Colombiana",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"30",
+            "mes":"MAYO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":"https://universidadsaluddigestiva.com/videos/bienvenidos.mp4"
+   },
+   "clases":[
+      {
+         "id":1,
+         "titulo":"DISPEPSIA FUNCIONAL",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"06",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":2,
+         "titulo":"ABORDAJE INTEGRAL DEL DOLOR ABDOMINAL AGUDO Y CRÓNICO",
+         "docente":"DR. REYNALDO RINCÓN",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"13",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":3,
+         "titulo":"SII UNA REALIDAD DOLOROSA Y MOLESTA",
+         "docente":"DR. FABIAN JULIAO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"20",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":4,
+         "titulo":"REFLUJO GASTROESOFÁGICO, LO QUE EL MÉDICO DEBE SABER",
+         "docente":"DR. FERNANDO PINEDA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"27",
+            "mes":"JUNIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":5,
+         "titulo":"ABORDAJE INTEGRAL DEL PACIENTE CON DIARREA CRÓNICA",
+         "docente":"DR. FABIAN JULIAO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"04",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":6,
+         "titulo":"ULCERA PÉPTICA E INFECCIÓN POR HELICOBACTER PYLORI ¿EN QUE ESTAMOS?",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"11",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":7,
+         "titulo":"ENFOQUE INTEGRAL DEL ESTREÑIMIENTO CRÓNICO",
+         "docente":"DR. REYNALDO RINCÓN",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"18",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":8,
+         "titulo":"SII ASOCIADO A SOBRECRECIMIENTO BACTERIANO - SIBO",
+         "docente":"DR. VIVIANA OBANDO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"25",
+            "mes":"JULIO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":9,
+         "titulo":"ENFERMEDAD HEPÁTICA GRASA NO ALCOHÓLICA",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"01",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":10,
+         "titulo":"MANEJO ACTUAL DEL VÓMITO Y NÁUSEAS, Y ASPECTOS CLÍNICO TERAPÉUTICOS",
+         "docente":"DR. FERNANDO PINEDA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"08",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":11,
+         "titulo":"TRANSAMINITIS",
+         "docente":"DR. FERNANDO SIERRA",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"15",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      },
+      {
+         "id":12,
+         "titulo":"PROBIÓTICOS Y SALUD GASTROINTESTINAL",
+         "docente":"DR. VIVIANA OBANDO",
+         "fecha":{
+            "dia":"JUEVES",
+            "dianumber":"22",
+            "mes":"AGOSTO",
+            "hora":"7:00",
+            "ampm":"p.m."
+         },
+         "video":""
+      }
+
+   ]
+}
