@@ -120,46 +120,58 @@ const showModal = (clase) => {
           </a-row>
           <a-row justify="space-around" align="top" :gutter="[16,16]" style="padding: 16px;">
             <a-col class="macroclase" :xs="22" :md="7" v-if="datos!=null" v-for="clase in toRaw(datos.clases)">
-                <a-row class="clase" justify="center" align="middle" >
-                    <a-typography-text class="m-0" style="color: white !important">CLASE {{clase.id}}</a-typography-text>
-                    <img v-if="clase.video!=''" src="/play.png" alt="" class="play">
+                <a-row  justify="start" class="row-h100" align="center">
+                  <a-col   :span="24">
+                    <a-row justify="center" align="middle" class="clase" >
+                      <a-typography-text class="m-0" style="color: white !important">CLASE {{clase.id}}</a-typography-text>
+                      <img v-if="clase.video!=''" src="/play.png" alt="" class="play">
+                    </a-row>
+                    <a-row justify="center" style="text-align: center;">
+                      <a-typography-link @click="showModal(clase)" class="m-0 text-big" >{{clase.titulo}}</a-typography-link>
+                    </a-row>
+                    <a-row justify="center">
+                      <a-typography-text  class="m-0" style="color: gray;">{{clase.docente}}</a-typography-text>
+                    </a-row>
+                  </a-col>
+          
+                  <a-col :span="24" style="align-content: end;">
+                    <a-config-provider
+                      :theme="{
+                        token: {
+                          fontFamily: 'Lato',
+                          colorPrimary:'purple',
+                          fontSize:12,
+                        },
+                      }"
+                    >
+                    <a-row justify="center" align="middle" :gutter="16" >
+                      <a-col>
+                        <a-row justify="end">
+                          <a-typography-text class="m-0">JUEVES</a-typography-text>
+                        </a-row>
+                        <a-row justify="end">
+                          <a-typography-title class="text-big m-0">{{clase.fecha.dianumber}}</a-typography-title>
+                        </a-row>
+                        <a-row justify="end">
+                          <a-typography-text class="m-0">{{clase.fecha.mes}}</a-typography-text>
+                        </a-row>
+                      </a-col>
+                      <a-col>
+                        <img src="/divider2.png" alt="" style="height: 90%">
+                      </a-col>
+                      <a-col class="col-center">
+                        <a-row align="bottom">
+                          <a-col><a-typography-title class="text-big m-0">7:00</a-typography-title></a-col>
+                          <a-col><a-typography-text>p.m.</a-typography-text> </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                    </a-config-provider>
+                  </a-col>
+                    
                 </a-row>
-                <a-row  justify="center" align="middle" >
-                  <a-col :span="24" style="text-align: center;"><a-typography-link @click="showModal(clase)" class="m-0 text-big" >{{clase.titulo}}</a-typography-link></a-col>
-                  <a-col><a-typography-text  class="m-0" style="color: gray;">{{clase.docente}}</a-typography-text></a-col>
-                </a-row>
-                <a-config-provider
-                :theme="{
-                  token: {
-                    fontFamily: 'Lato',
-                    colorPrimary:'purple',
-                    fontSize:12,
-                  },
-                }"
-              >
-                <a-row justify="center" align="end" :gutter="16" style="padding:10px;align-items: stretch;;">
-                <a-col>
-                  <a-row justify="end">
-                    <a-typography-text class="m-0">JUEVES</a-typography-text>
-                  </a-row>
-                  <a-row justify="end">
-                    <a-typography-title class="text-big m-0">{{clase.fecha.dianumber}}</a-typography-title>
-                  </a-row>
-                  <a-row justify="end">
-                    <a-typography-text class="m-0">{{clase.fecha.mes}}</a-typography-text>
-                  </a-row>
-                </a-col>
-                <a-col>
-                  <img src="/divider2.png" alt="" style="height: 90%">
-                </a-col>
-                <a-col class="col-center">
-                  <a-row align="bottom">
-                    <a-col><a-typography-title class="text-big m-0">7:00</a-typography-title></a-col>
-                    <a-col><a-typography-text>p.m.</a-typography-text> </a-col>
-                  </a-row>
-                </a-col>
-              </a-row>
-              </a-config-provider>
+
+     
               
             </a-col>
             <a-modal
@@ -173,9 +185,31 @@ const showModal = (clase) => {
         </a-space>
       </a-layout-content>
       <a-row justify="center" class="transparente">
-        <a-col :xs="24" :md="20" >
-          <img src="/footer.png" alt="" style="height: auto;width: 100%;">
+        <a-col :xs="24" :md="20">
+          <a-row justify="space-around" :gutter="[16,16]">
+            <a-col :xs="6" :md="4" >
+              <img src="/footer1.png" alt="" style="height: auto;width: 100%; padding: 16px ;">
+            </a-col>
+            <a-divider type="vertical" style="height: auto; border-color: #fff" dashed />
+            <a-col :xs="6" :md="4" >
+              <img src="/footer2.png" alt="" style="height: auto;width: 100%; padding: ;">
+            </a-col>
+            <a-divider type="vertical" style="height: auto; border-color: #fff" dashed />
+            <a-col :xs="6" :md="4" >
+              <img src="/footer3.png" alt="" style="height: auto;width: 100%; padding: ;">
+            </a-col>
+            <a-divider type="vertical" :xs="{style: 'display:none;'}" style="height: auto; border-color: #fff" dashed />
+            <a-col :xs="6" :md="4" >
+              <img src="/footer4.png" alt="" style="height: auto;width: 100%; padding: ;">
+            </a-col>
+            <a-divider type="vertical" style="height: auto; border-color: #fff" dashed />
+            <a-col :xs="6" :md="4" >
+              <img src="/footer5.png" alt="" style="height: auto;width: 100%; padding: ;">
+            </a-col>
+          </a-row>
+          
         </a-col>
+        
         <a-col :xs="24" :md="20" >
           <a-config-provider
             :theme="{

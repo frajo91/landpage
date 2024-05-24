@@ -78,3 +78,7 @@ color: #4b1951 !important;
   left: 180px;
   top: -10px;
 }
+
+.row-h100{
+  height: 100% !important; 
+}
