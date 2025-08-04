@@ -1,25 +1,25 @@
 {
    "bienvenida":{
          "titulo":"BIENVENIDA AL CURSO",
-         "descripcion": "Universidad Procaps® y Médicos de la Fundación Santa Fe y miembros activos de la sociedad de Gastroenterología Colombiana",
+         "descripcion": "Universidad Procaps<sup><span style='font-size: 12px !important;'>®</span></sup> y Médicos de la Fundación Santa Fe y miembros activos de la sociedad de Gastroenterología Colombiana",
          "fecha":{
             "dia":"JUEVES",
-            "dianumber":"30",
-            "mes":"MAYO",
+            "dianumber":"28",
+            "mes":"DE AGOSTO",
             "hora":"7:00",
             "ampm":"p.m."
          },
-         "video":"https://universidadsaluddigestiva.com/videos/bienvenidos.mp4"
+         "video":"https://universidadsaluddigestiva.com/video/bienvenidos.mp4"
    },
    "clases":[
       {
          "id":1,
-         "titulo":"DISPEPSIA FUNCIONAL",
+         "titulo":"NAUSEAS Y VOMITO, UNA CONSTANTE PROBLEMÁTICA",
          "docente":"DR. FERNANDO SIERRA",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"06",
-            "mes":"JUNIO",
+            "dia":"",
+            "dianumber":"28",
+            "mes":"AGOSTO",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -27,12 +27,12 @@
       },
       {
          "id":2,
-         "titulo":"ABORDAJE INTEGRAL DEL DOLOR ABDOMINAL AGUDO Y CRÓNICO",
-         "docente":"DR. REYNALDO RINCÓN",
+         "titulo":"P-CAPS O IBP DE LIBERACIÓN INMEDIATA ¿QUE ELEGIR?",
+         "docente":"DR. WILLIAM OTERO",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"13",
-            "mes":"JUNIO",
+            "dia":"",
+            "dianumber":"4",
+            "mes":"SEPTIEMBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -40,12 +40,12 @@
       },
       {
          "id":3,
-         "titulo":"SII UNA REALIDAD DOLOROSA Y MOLESTA",
+         "titulo":"ESOFAGITIS EOSINOFÍLICA ¿QUE TAN COMÚN EN COLOMBIA?",
          "docente":"DR. FABIAN JULIAO",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"20",
-            "mes":"JUNIO",
+            "dia":"",
+            "dianumber":"11",
+            "mes":"SEPTIEMBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -53,12 +53,12 @@
       },
       {
          "id":4,
-         "titulo":"REFLUJO GASTROESOFÁGICO, LO QUE EL MÉDICO DEBE SABER",
-         "docente":"DR. FERNANDO PINEDA",
+         "titulo":"RIFAXIMINA EN 2025 EL ANTIBIÓTICO AMIGO",
+         "docente":"DR. WILLIAM OTERO",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"27",
-            "mes":"JUNIO",
+            "dia":"",
+            "dianumber":"18",
+            "mes":"SEPTIEMBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -66,12 +66,12 @@
       },
       {
          "id":5,
-         "titulo":"ABORDAJE INTEGRAL DEL PACIENTE CON DIARREA CRÓNICA",
-         "docente":"DR. FABIAN JULIAO",
+         "titulo":"REFLUJO GASTROESOFÁGICO, UNA MIRADA A LA HISTORIA",
+         "docente":"DR. MAURICIO CRISPIN",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"04",
-            "mes":"JULIO",
+            "dia":"",
+            "dianumber":"25",
+            "mes":"SEPTIEMBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -79,12 +79,12 @@
       },
       {
          "id":6,
-         "titulo":"ULCERA PÉPTICA E INFECCIÓN POR HELICOBACTER PYLORI ¿EN QUE ESTAMOS?",
+         "titulo":"ESTREÑIMIENTO ¿QUE HACER CON UN PACIENTE CRÓNICO?",
          "docente":"DR. FERNANDO SIERRA",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"11",
-            "mes":"JULIO",
+            "dia":"",
+            "dianumber":"2",
+            "mes":"OCTUBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -92,12 +92,12 @@
       },
       {
          "id":7,
-         "titulo":"ENFOQUE INTEGRAL DEL ESTREÑIMIENTO CRÓNICO",
-         "docente":"DR. REYNALDO RINCÓN",
+         "titulo":"HELICOBACTER PYLORI, MANEJO ACOPLADO A COLOMBIANOS",
+         "docente":"DRA. VIVIANA OBANDO",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"18",
-            "mes":"JULIO",
+            "dia":"",
+            "dianumber":"9",
+            "mes":"OCTUBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -105,12 +105,12 @@
       },
       {
          "id":8,
-         "titulo":"SII ASOCIADO A SOBRECRECIMIENTO BACTERIANO - SIBO",
-         "docente":"DR. VIVIANA OBANDO",
+         "titulo":"PROBIÓTICOS, PREBIÓTICOS, SIMBIÓTICOS Y ¿QUE MÁS VIENE?",
+         "docente":"DR. GUSTAVO ROMERO",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"25",
-            "mes":"JULIO",
+            "dia":"",
+            "dianumber":"16",
+            "mes":"OCTUBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -118,12 +118,12 @@
       },
       {
          "id":9,
-         "titulo":"ENFERMEDAD HEPÁTICA GRASA NO ALCOHÓLICA",
+         "titulo":"DIARREA CRÓNICA, CASOS CLÍNICOS Y DE MANEJO EN CONSULTORIO",
          "docente":"DR. FERNANDO SIERRA",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"01",
-            "mes":"AGOSTO",
+            "dia":"",
+            "dianumber":"23",
+            "mes":"OCTUBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -131,12 +131,12 @@
       },
       {
          "id":10,
-         "titulo":"MANEJO ACTUAL DEL VÓMITO Y NÁUSEAS, Y ASPECTOS CLÍNICO TERAPÉUTICOS",
-         "docente":"DR. FERNANDO PINEDA",
+         "titulo":"ENFERMEDAD INFLAMATORIA INTESTINAL ¿REMITIR AL ESPECILISTA?",
+         "docente":"DRA. MARIA TEREZA GALIANO",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"08",
-            "mes":"AGOSTO",
+            "dia":"",
+            "dianumber":"30",
+            "mes":"OCTUBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -144,12 +144,12 @@
       },
       {
          "id":11,
-         "titulo":"TRANSAMINITIS",
-         "docente":"DR. FERNANDO SIERRA",
+         "titulo":"SOBRECRECIMIENTO BACTERIANO POST TRATAMIENTO ERRADICADOR / DUELO DE TITANES",
+         "docente":"DRA. VIVIANA OBANDO DR. ALVARO MUÑOZ",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"15",
-            "mes":"AGOSTO",
+            "dia":"",
+            "dianumber":"6",
+            "mes":"NOVIEMBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },
@@ -157,12 +157,12 @@
       },
       {
          "id":12,
-         "titulo":"PROBIÓTICOS Y SALUD GASTROINTESTINAL",
-         "docente":"DR. VIVIANA OBANDO",
+         "titulo":"DISPEPSIA COMO MANEJAR AL PACIENTE",
+         "docente":"DR. FERNANDO SIERRA",
          "fecha":{
-            "dia":"JUEVES",
-            "dianumber":"22",
-            "mes":"AGOSTO",
+            "dia":"",
+            "dianumber":"13",
+            "mes":"NOVIEMBRE",
             "hora":"7:00",
             "ampm":"p.m."
          },

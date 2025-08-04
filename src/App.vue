@@ -20,7 +20,9 @@ const showModal = (clase) => {
   video.value=clase.video;
 };
 
-
+    const irAnterior=()=> {
+      window.location.href = 'https://universidadsaluddigestiva.com/2024/';
+    }
 
 </script>
 
@@ -30,7 +32,7 @@ const showModal = (clase) => {
     :theme="{
       token: {
         fontFamily: 'Lato',
-        colorPrimary:'purple',
+        colorPrimary:'#00b837ff',
         fontSize:16,
       },
     }"
@@ -46,7 +48,7 @@ const showModal = (clase) => {
           <a-row justify="center" align="middle"> 
              <a-col :xs="7" :md="6">
               <a-row justify="center">
-                <img src="/logo1.png" alt="" :width="50">
+                <img src="/logo1.png" alt="" :width="70">
               </a-row>
               <a-row justify="center" >
                 <a-typography-title class="text-big">12</a-typography-title>
@@ -63,7 +65,7 @@ const showModal = (clase) => {
             </a-col>
              <a-col :xs="11" :md="6">
               <a-row justify="center">
-                <img src="/logo1.png" alt="" :width="50">
+                <img src="/logo1.png" alt="" :width="70">
               </a-row>
               <a-row justify="center" align="bottom">
                 <a-typography-text>Todos los</a-typography-text>
@@ -72,7 +74,7 @@ const showModal = (clase) => {
                 <a-typography-title class="text-big">JUEVES</a-typography-title>
               </a-row >
               <a-row justify="center">
-                <a-typography-text>Inicio 30 de mayo</a-typography-text>
+                <a-typography-text>Inicio 28 de agosto</a-typography-text>
               </a-row>
               </a-col>
             <a-col >
@@ -80,7 +82,7 @@ const showModal = (clase) => {
             </a-col>
              <a-col :xs="5" :md="6">
               <a-row justify="center">
-                <img src="/logo1.png" alt="" :width="50">
+                <img src="/logo1.png" alt="" :width="70">
               </a-row>
               <a-row justify="center" >
                 <a-typography-title class="text-big">1</a-typography-title>
@@ -94,11 +96,11 @@ const showModal = (clase) => {
             </a-col>
           </a-row>
           <a-row justify="center">
-            <a-col :xs="22" :md="18">
-            <a-typography-paragraph style="text-align: center; padding: 8px;" >Durante estas sesiones, se abordarán las patologías gastrointestinales más frecuentes en la práctica clínica, brindando información actualizada, casos clínicos relevantes y discusiones interactivas.</a-typography-paragraph>
+            <a-col :xs="22" :md="18" class="linea-difuminada">
+            <a-typography-paragraph style="text-align: center; padding: 8px;">Durante estas sesiones, se abordarán las patologías gastrointestinales más frecuentes en la práctica clínica, brindando información actualizada, casos clínicos relevantes y discusiones interactivas.</a-typography-paragraph>
             </a-col>
           </a-row>
-          <a-row justify="center" :gutter="16" align="middle">
+          <a-row justify="space-around" :gutter="16" align="middle">
             <a-col :xs="22" :md="12" >
               <videoplayer v-if="datos!=null" v-bind:url="datos.bienvenida.video"/>
                
@@ -107,34 +109,45 @@ const showModal = (clase) => {
                 <a-row justify="center" align="middle">
                   <a-col>
                     <a-row>
-                      <a-typography-title :level="2" class="text-big" v-if="datos!=null">{{datos.bienvenida.titulo}}</a-typography-title>
+                      <a-typography-title :level="2" class="text-big" v-if="datos!=null" v-html="datos.bienvenida.titulo"></a-typography-title>
                     </a-row>
                     <a-row>
-                      <a-typography-text v-if="datos!=null">{{datos.bienvenida.descripcion}}
-                      </a-typography-text> 
+                      <a-typography-text v-if="datos!=null" v-html="datos.bienvenida.descripcion"></a-typography-text> 
                     </a-row>
                     <fecha  v-if="datos!=null" v-bind:fecha="datos.bienvenida.fecha"/>
                   </a-col>
                 </a-row>
             </a-col>
           </a-row>
-          <a-row justify="space-around" align="top" :gutter="[16,16]" style="padding: 16px;">
-            <a-col class="macroclase" :xs="22" :md="7" v-if="datos!=null" v-for="clase in toRaw(datos.clases)">
+          <a-row justify="space-around" align="top" :gutter="[24,48]" style="padding: 24px; padding-bottom: 24px;">
+            <a-col class="macroclase" :xs="22" :md="8" v-if="datos!=null" v-for="clase in toRaw(datos.clases)">
                 <a-row  justify="start" class="row-h100" align="center">
-                  <a-col   :span="24">
-                    <a-row justify="center" align="middle" class="clase" >
-                      <a-typography-text class="m-0" style="color: white !important">CLASE {{clase.id}}</a-typography-text>
+                  <a-col   :span="24" class="linea-difuminada3">
+                    <a-row justify="center" align="middle" class="clase linea-difuminada2" >
+                      <a-space size="middle">
                       <img v-if="clase.video!=''" src="/play.png" alt="" class="play">
+                      <img v-if="clase.video==''" src="/playno.png" alt="" class="play">
+                      <a-typography-title :level="4" 
+                        :class="{
+                            'text-big': true,        // Siempre se aplica
+                            'sin_video': clase.video=='',   // Solo si hay video
+                          }">CLASE {{clase.id}}</a-typography-title>
+                      </a-space>
                     </a-row>
                     <a-row justify="center" style="text-align: center;">
-                      <a-typography-link @click="showModal(clase)" class="m-0 text-big" >{{clase.titulo}}</a-typography-link>
+                      <a-typography-link @click="showModal(clase)"  
+                      :class="{
+                          'text-big2': true,        // Siempre se aplica
+                          'm-0': true,             // Siempre se aplica
+                          'sin_video': clase.video=='',   // Solo si hay video
+                        }"  >{{clase.titulo}}</a-typography-link>
                     </a-row>
                     <a-row justify="center">
-                      <a-typography-text  class="m-0" style="color: gray;">{{clase.docente}}</a-typography-text>
+                      <a-typography-text  class="m-0" style="color: gray;text-align:center; ">{{clase.docente}}</a-typography-text>
                     </a-row>
                   </a-col>
           
-                  <a-col :span="24" style="align-content: end;">
+                  <a-col :span="24" style="align-content: end; margin-top: 10px;">
                     <a-config-provider
                       :theme="{
                         token: {
@@ -147,21 +160,31 @@ const showModal = (clase) => {
                     <a-row justify="center" align="middle" :gutter="16" >
                       <a-col>
                         <a-row justify="end">
-                          <a-typography-text class="m-0">JUEVES</a-typography-text>
+                          <a-typography-text class="m-0">{{clase.fecha.dia}}</a-typography-text>
                         </a-row>
                         <a-row justify="end">
-                          <a-typography-title class="text-big m-0">{{clase.fecha.dianumber}}</a-typography-title>
+                          <a-typography-title  
+                          :class="{
+                            'text-big': true,        // Siempre se aplica
+                            'm-0': true,             // Siempre se aplica
+                            'sin_video': clase.video=='',   // Solo si hay video
+                          }">{{clase.fecha.dianumber}}</a-typography-title>
                         </a-row>
                         <a-row justify="end">
                           <a-typography-text class="m-0">{{clase.fecha.mes}}</a-typography-text>
                         </a-row>
                       </a-col>
                       <a-col>
-                        <img src="/divider2.png" alt="" style="height: 90%">
+                        <img src="/divider2.png" alt="" style="height: 60px">
                       </a-col>
                       <a-col class="col-center">
                         <a-row align="bottom">
-                          <a-col><a-typography-title class="text-big m-0">7:00</a-typography-title></a-col>
+                          <a-col><a-typography-title 
+                             :class="{
+                                'text-big': true,        // Siempre se aplica
+                                'm-0': true,             // Siempre se aplica
+                                'sin_video': clase.video=='',   // Solo si hay video
+                              }">7:00</a-typography-title></a-col>
                           <a-col><a-typography-text>p.m.</a-typography-text> </a-col>
                         </a-row>
                       </a-col>
@@ -184,52 +207,41 @@ const showModal = (clase) => {
           </a-row>
         </a-space>
       </a-layout-content>
-      <a-row justify="center" class="transparente">
-        <a-col :xs="24" :md="20">
-          <a-row justify="space-around" :gutter="[16,16]">
-            <a-col :xs="6" :md="4" >
-              <img src="/footer1.png" alt="" style="height: auto;width: 100%; padding: 16px ;">
+      <a-row justify="center" class="transparente container1">
+        <a-col>
+          <a-button type="primary" shape="round" class="button_version" size="large" @click="irAnterior()">
+            HAZ CLIC AQUÍ PARA VER LA VERSIÓN 1
+          </a-button>
+        </a-col>
+        <a-col :xs="24">
+          <a-row justify="space-around" :gutter="[16,16]" align="middle">
+            <a-col :xs="8" :md="5"  >
+              <img src="/footer1.png" alt="" style="height: auto;width: 100%; padding: 8px ;">
             </a-col>
-            <a-divider type="vertical" style="height: auto; border-color: #fff" dashed />
-            <a-col :xs="6" :md="4" >
-              <img src="/footer2.png" alt="" style="height: auto;width: 100%; padding: ;">
+            
+            <a-col :xs="8" :md="5" >
+              <img src="/footer2.png" alt="" style="height: auto;width: 100%; padding: 8px;">
             </a-col>
-            <a-divider type="vertical" style="height: auto; border-color: #fff" dashed />
-            <a-col :xs="6" :md="4" >
-              <img src="/footer3.png" alt="" style="height: auto;width: 100%; padding: ;">
+            
+            <a-col :xs="8" :md="5" >
+              <img src="/footer3.png" alt="" style="height: auto;width: 100%; padding: 8px;">
             </a-col>
-            <a-divider type="vertical" :xs="{style: 'display:none;'}" style="height: auto; border-color: #fff" dashed />
-            <a-col :xs="6" :md="4" >
-              <img src="/footer4.png" alt="" style="height: auto;width: 100%; padding: ;">
+            
+            <a-col :xs="8" :md="5" >
+              <img src="/footer4.png" alt="" style="height: auto;width: 100%; padding: 8px;">
             </a-col>
-            <a-divider type="vertical" style="height: auto; border-color: #fff" dashed />
-            <a-col :xs="6" :md="4" >
-              <img src="/footer5.png" alt="" style="height: auto;width: 100%; padding: ;">
+            
+            <a-col :xs="8" :md="5" >
+              <img src="/footer5.png" alt="" style="height: auto;width: 100%; padding: 8px;">
+            </a-col>
+            <a-col :xs="8" :md="5" >
+              <img src="/footer6.png" alt="" style="height: auto;width: 100%; padding: 8px;">
+            </a-col>
+            <a-col :xs="8" :md="5" >
+              <img src="/footer7.png" alt="" style="height: auto;width: 100%; padding: 8px;">
             </a-col>
           </a-row>
           
-        </a-col>
-        
-        <a-col :xs="24" :md="20" >
-          <a-config-provider
-            :theme="{
-              token: {
-                fontFamily: 'Lato',
-                colorPrimary:'purple',
-                fontSize:8,
-              },
-            }"
-          >
-          <a-typography-paragraph style="color: white;">
-            EZOLIUM®: Esomeprazol magnésico tri hidrato 44,5 mg equivalente a esomeprazol base 40.00000 mg. 1ndicaciones: Reﬂujo gastroesofág ico (rge), (tratamiento de la esofagits por reﬂujo erosivo, tratamiento preventvo a largo plazo de recaídas de esofagits cicatrizada, tratamiento Sintomátco del reﬂujo gastroesofágico), en combinación con 
-            un régimen terapéutco, Antbacteriano adecuado para erradicar helicobacter pylori y para: cicatrización de la Ulcera duodenal asociada con helicobacter pylori; prevención de recaídas de úlceras Péptcas en los pacientes con úlceras relacionadas con helicobacter pylori. Tratamiento del síndrome de zollinger-ellison. CONTRAINDICA CIONES. Hiper-
-            sensibilidad conocida al esomeprazol, a los benzimidazoles susttuidos o a cualquier otro componente de la fórmula. REGISTRO SANITARIO: INVIMA 2019M-0015016-R1. PRODUO®: COMPOSICIÓN: Cada cápsula blanda contene Bromuro de Pinaverio100 mg; Simetcona331,492 mg equivalentea Dimetcona 300 mg.INDICACIONES:Antes-
-            pasmódico y antﬂatulento. CONTRAINDICACIONES: Hipersensibilidad al principio actvo o alguno de los excipientes, embarazo y lactancia. PRESENTACIÓN: Caja x 32 CBG capsulas de liberación no modiﬁcada oral capsula 1,0000u. REGISTRO SANITARIO: 2022 M-0020736. MENTSII®: COMPOSICIÓN: Cada cápsula gastro-resistente contene 
-            aceite de menta (mentha x piperita l.) 187.00000 mg. INDICACIONES: Alivio sintomátco de trastornos digestvos como la dispepsia y la ﬂatulencia. Antespasmódico y carminatvo. CONTRAINDICACIONES: hipersensibilidad a los componentes de la planta. Embarazo y lactancia. Niños menores de 4 años. PRESENTACIÓN: Caja x 30 cápsulas blan-
-            das de gelatna. REGISTRO SANITARIO PFT2022-0002844. MUVETT®: Reg. San. INVIMA 2003M-0002555 Muvet ﬂora: Reg. San. INVIMA 2001 M-0000192 Muvet: Reg. San. INVIMA 2002M-00001363 Muvet S 60U: Reg. San. INVIMA 2004M-0003716 Muvet S 21U: Reg. San. INVIMA 2004M-0003716. IFAXIM®: Reg. San. INVIMA 
-            2016M- 0017375
-          </a-typography-paragraph>
-        </a-config-provider>
         </a-col>
         </a-row>
       
